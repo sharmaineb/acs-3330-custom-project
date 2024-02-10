@@ -1,11 +1,14 @@
-import './App.css';
-import Counter from './features/counter/Counter';
+import MovieComponent from "./components/Movie";
+import PostsList from "./features/posts/PostsList";
+import AddPostForm from "./features/posts/AddPost";
 
 function App() {
   return (
-    <div className='App' >
-      <Counter /> 
-    </div>
+    <main className="App">
+      <MovieComponent />
+      <AddPostForm />
+      <PostsList />
+    </main>
   );
 }
 
