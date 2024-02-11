@@ -6,6 +6,11 @@ const PostAuthor = ({ userId }) => {
 
     const author = users.find(user => user.id === userId);
 
-    return <span className="text-gray-600">{author ? `by ${author.name}` : 'Unknown author'}</span>
+    if (!author) {
+        return <span className="text-gray-600">Author loading...</span>;
+    }
+
+    return <span className="text-gray-600">by {author.name}</span>;
 }
+
 export default PostAuthor;

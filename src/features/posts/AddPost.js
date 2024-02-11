@@ -36,10 +36,10 @@ const AddPostForm = () => {
     ))
 
     return (
-        <section className="max-w-2xl mx-auto">
-            <h2 className="text-xl font-semibold mb-4">Add a New Post</h2>
+        <section className="max-w-2xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Add a New Entry</h2>
             <form className="space-y-4">
-                <label htmlFor="postTitle" className="block">Post Title:</label>
+                <label htmlFor="postTitle" className="block text-gray-800">Entry Title:</label>
                 <input
                     type="text"
                     id="postTitle"
@@ -48,12 +48,12 @@ const AddPostForm = () => {
                     onChange={onTitleChanged}
                     className="border border-gray-300 rounded px-4 py-2 w-full"
                 />
-                <label htmlFor="postAuthor" className="block">Author:</label>
+                <label htmlFor="postAuthor" className="block text-gray-800">Author:</label>
                 <select id="postAuthor" value={userId} onChange={onAuthorChanged} className="border border-gray-300 rounded px-4 py-2 w-full">
                     <option value=""></option>
                     {usersOptions}
                 </select>
-                <label htmlFor="postContent" className="block">Content:</label>
+                <label htmlFor="postContent" className="block text-gray-800">Content:</label>
                 <textarea
                     id="postContent"
                     name="postContent"
