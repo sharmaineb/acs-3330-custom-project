@@ -25,7 +25,7 @@ const PostsList = () => {
 
     return (
         <section className="max-w-2xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Entries</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Entries:</h2>
             {renderedPosts}
         </section>
     )

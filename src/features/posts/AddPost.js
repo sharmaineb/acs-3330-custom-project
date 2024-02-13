@@ -66,7 +66,7 @@ const AddPostForm = () => {
                     onClick={onSavePostClicked}
                     disabled={!canSave}
                     className={`bg-blue-500 text-white px-4 py-2 rounded ${canSave ? 'hover:bg-blue-600 cursor-pointer' : 'cursor-not-allowed'}`}
-                >Save Post</button>
+                >Add Entry</button>
             </form>
         </section>
     )
