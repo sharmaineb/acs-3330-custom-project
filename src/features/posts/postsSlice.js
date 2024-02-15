@@ -18,7 +18,7 @@ const initialState = [
     },
     {
         id: '2',
-        title: 'Barbie Movie',
+        title: 'Barbie',
         content: "Beautiful.",
         date: sub(new Date(), { minutes: 5 }).toISOString(),
         userId: '2', 
@@ -100,7 +100,49 @@ const initialState = [
             coffee: 0
         }
     },
-    // add more entries later
+    {
+        id: '8',
+        title: 'Interstellar',
+        content: "Stunning visuals, great soundtrack, intriguing story.",
+        date: sub(new Date(), { days: 5 }).toISOString(),
+        userId: '2', 
+        reactions: {
+            thumbsUp: 25,
+            wow: 18,
+            heart: 20,
+            thumbsDown: 1,
+            coffee: 0
+        }
+    },
+    {
+        id: '9',
+        title: 'If Beale Street Could Talk',
+        content: "Director Barry Jenkins delivers a poignant and visually stunning adaptation of James Baldwin's novel, 'If Beale Street Could Talk,' weaving together themes of love, injustice, and resilience with masterful storytelling and breathtaking cinematography.",
+        date: sub(new Date(), { days: 6 }).toISOString(),
+        userId: '1', 
+        reactions: {
+            thumbsUp: 28,
+            wow: 15,
+            heart: 26,
+            thumbsDown: 0,
+            coffee: 5
+        }
+    },
+    {
+        id: '10',
+        title: '10 Things I Hate About You',
+        content: "Classic rom-com with a Shakespearean twist.",
+        date: sub(new Date(), { days: 7 }).toISOString(),
+        userId: '0', 
+        reactions: {
+            thumbsUp: 35,
+            wow: 22,
+            heart: 30,
+            thumbsDown: 3,
+            coffee: 0
+        }
+    },
+    // add more movies later
 ];
 
 const postsSlice = createSlice({
