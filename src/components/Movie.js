@@ -59,7 +59,12 @@ const MovieComponent = () => {
   return (
     <div className="container mx-auto px-4 py-8" onClick={handleOutsideClick}>
       <h1 className="text-3xl font-bold mb-4">Popular Movies</h1>
-      <div className="mb-4">
+      <motion.div 
+        className="mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <input
           type="text"
           placeholder="Search movies by title"
@@ -67,14 +72,23 @@ const MovieComponent = () => {
           onChange={handleSearchInputChange}
           className="border border-gray-400 px-4 py-2 rounded-lg w-full"
         />
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      </motion.div>
+      <motion.div 
+        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         {movies.map(movie => (
           <motion.div 
             key={movie.id} 
             className="relative"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3 }}
           >
             <img 
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
@@ -85,7 +99,7 @@ const MovieComponent = () => {
             <p className="text-center">{movie.title}</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
       <AnimatePresence>
         {selectedMovie && (
           <motion.div 
@@ -95,7 +109,13 @@ const MovieComponent = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-10 overflow-y-auto flex justify-center items-center bg-gray-900 bg-opacity-50"
           >
-            <div ref={modalRef} className="bg-white p-6 rounded-lg max-w-3xl overflow-hidden relative">
+            <motion.div 
+              ref={modalRef} 
+              className="bg-white p-6 rounded-lg max-w-3xl overflow-hidden relative"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <button onClick={closeModal} className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 focus:outline-none z-20">
                 Close
               </button>
@@ -125,7 +145,7 @@ const MovieComponent = () => {
               >
                 View on TMDB
               </a>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
