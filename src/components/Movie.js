@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const MovieComponent = () => {
   const [movies, setMovies] = useState([]);
@@ -69,7 +70,12 @@ const MovieComponent = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {movies.map(movie => (
-          <div key={movie.id} className="relative">
+          <motion.div 
+            key={movie.id} 
+            className="relative"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <img 
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
               alt={movie.title} 
@@ -77,44 +83,52 @@ const MovieComponent = () => {
               onClick={() => handleMovieClick(movie)}
             />
             <p className="text-center">{movie.title}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-      {selectedMovie && (
-        <div className="fixed inset-0 z-10 overflow-y-auto flex justify-center items-center bg-gray-900 bg-opacity-50">
-          <div ref={modalRef} className="bg-white p-6 rounded-lg max-w-3xl overflow-hidden relative">
-            <button onClick={closeModal} className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 focus:outline-none z-20">
-              Close
-            </button>
-            <h2 className="text-3xl font-bold mb-2">{selectedMovie.title}</h2>
-            {trailerKey && (
-              <div className="mb-4">
-                <iframe 
-                  width="100%" 
-                  height="315" 
-                  src={`https://www.youtube.com/embed/${trailerKey}`} 
-                  title={`${selectedMovie.title} Trailer`}
-                  frameBorder="0" 
-                  allowFullScreen
-                  className="rounded-lg"
-                ></iframe>
-              </div>
-            )}
-            {!trailerKey && <p>No trailer available.</p>}
-            <p className="text-lg mb-2"><strong>Release Date:</strong> {selectedMovie.release_date}</p>
-            <p className="text-lg mb-2"><strong>Average Vote:</strong> {selectedMovie.vote_average}</p>
-            <p className="text-lg mb-4"><strong>Overview:</strong> {selectedMovie.overview}</p>
-            <a 
-              href={`https://www.themoviedb.org/movie/${selectedMovie.id}`} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 hover:underline"
-            >
-              View on TMDB
-            </a>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {selectedMovie && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-10 overflow-y-auto flex justify-center items-center bg-gray-900 bg-opacity-50"
+          >
+            <div ref={modalRef} className="bg-white p-6 rounded-lg max-w-3xl overflow-hidden relative">
+              <button onClick={closeModal} className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 focus:outline-none z-20">
+                Close
+              </button>
+              <h2 className="text-3xl font-bold mb-2">{selectedMovie.title}</h2>
+              {trailerKey && (
+                <div className="mb-4">
+                  <iframe 
+                    width="100%" 
+                    height="315" 
+                    src={`https://www.youtube.com/embed/${trailerKey}`} 
+                    title={`${selectedMovie.title} Trailer`}
+                    frameBorder="0" 
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+              )}
+              {!trailerKey && <p>No trailer available.</p>}
+              <p className="text-lg mb-2"><strong>Release Date:</strong> {selectedMovie.release_date}</p>
+              <p className="text-lg mb-2"><strong>Average Vote:</strong> {selectedMovie.vote_average}</p>
+              <p className="text-lg mb-4"><strong>Overview:</strong> {selectedMovie.overview}</p>
+              <a 
+                href={`https://www.themoviedb.org/movie/${selectedMovie.id}`} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-600 hover:underline"
+              >
+                View on TMDB
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
