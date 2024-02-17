@@ -9,11 +9,11 @@ const initialState = [
         date: sub(new Date(), { minutes: 10 }).toISOString(),
         userId: '1', 
         reactions: {
-            thumbsUp: 0,
-            wow: 0,
-            heart: 0,
-            thumbsDown: 0,
-            coffee: 0
+            thumbsUp: 7,
+            wow: 5,
+            heart: 6,
+            thumbsDown: 2,
+            coffee: 8
         }
     },
     {

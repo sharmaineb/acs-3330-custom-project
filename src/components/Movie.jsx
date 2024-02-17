@@ -57,6 +57,7 @@ const MovieComponent = () => {
   };
 
   return (
+    <div className='bg-blue-100'>
     <div className="container mx-auto px-4 py-8" onClick={handleOutsideClick}>
       <h1 className="text-3xl font-bold mb-4">Popular Movies</h1>
       <motion.div 
@@ -149,6 +150,7 @@ const MovieComponent = () => {
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
     </div>
   );
 };
