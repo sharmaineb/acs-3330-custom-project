@@ -26,7 +26,7 @@ const Landing = () => {
             Single Page Web Applications
           </h2>
           <h3 className="font-oswald text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2">
-            Custom Project
+          FilmWave
           </h3>
           <h3 className="font-oswald text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
             By: Sharmaine L. Borbe

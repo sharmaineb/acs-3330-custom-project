@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# FilmWave
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FilmWave is a dynamic web application designed for avid movie enthusiasts. It provides a platform where users can engage with one another by sharing their thoughts and reviews on recently watched movies. With features like browsing popular movies, searching for specific titles, watching trailers, and interacting with other users' posts, FilmWave offers a vibrant community for exploring and discussing cinematic experiences.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Explore Popular Movies:** Users can browse through a collection of popular movies fetched from the TMDB API, allowing them to stay up-to-date with the latest releases.
+- **Search Movies:** Users can search for movies by title.
+- **View Movie Details:** Users can view detailed information about each movie, including its synopsis, release date, genre, and rating. They can also watch trailers to get a preview of the film.
+- **Create Entries:** Users can create entries to share their thoughts, reviews, and opinions on movies they've watched.
+- **React to Posts:** Users can read and react to posts with emojis to express their feelings about the content, fostering engagement and interaction among the community.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: JavaScript library for building user interfaces.
+- **Redux Toolkit**: Library for managing application state.
+- **Framer Motion**: Animation library for React.
+- **Date-fns**: Library for manipulating dates in JavaScript.
+- **Tailwind CSS**: Utility-first CSS framework for styling web applications.
+- **React Redux**: Official React bindings for Redux state management.
+- **React DOM**: Package for working with the DOM in React.
+- **React Scripts**: Configuration and scripts for running React applications.
+- **Web Vitals**: Library for measuring web performance metrics.
+- **Testing Library**: Utilities for testing React components and applications.
+- **eslintConfig**: Configuration for ESLint, a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+- **Browserslist**: Configuration for targeting specific browsers during development and production.
+- **devDependencies**: Tailwind CSS as a development dependency for building and styling the UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To run the project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm start`.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
