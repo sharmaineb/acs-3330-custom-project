@@ -156,7 +156,6 @@ const initialState = [
             coffee: 0
         }
     },
-    // The Princess Diaries
     {
         id: '12',
         title: 'The Princess Diaries',
@@ -171,7 +170,6 @@ const initialState = [
             coffee: 0
         }
     },
-    // Get Out
     {
         id: '13',
         title: 'Get Out',
@@ -186,7 +184,6 @@ const initialState = [
             coffee: 0
         }
     },
-    // Minari
     {
         id: '14',
         title: 'Minari',
@@ -201,7 +198,6 @@ const initialState = [
             coffee: 0
         }
     },
-    // Four Sisters and a Wedding
     {
         id: '15',
         title: 'Four Sisters and a Wedding',
@@ -213,6 +209,20 @@ const initialState = [
             wow: 40,
             heart: 50,
             thumbsDown: 2,
+            coffee: 0
+        }
+    },
+    {
+        id: '16',
+        title: 'The Apartment',
+        content: "A romantic comedy-drama about a man who lends his apartment to his bosses for their extramarital affairs, only to fall in love with the elevator operator.",
+        date: sub(new Date(), { days: 8 }).toISOString(),
+        userId: '2', 
+        reactions: {
+            thumbsUp: 50,
+            wow: 35,
+            heart: 45,
+            thumbsDown: 4,
             coffee: 0
         }
     },

@@ -18,7 +18,7 @@ const ReactionButtons = ({ post }) => {
     };
 
     return (
-        <div className="flex overflow-x-auto space-x-2">
+        <div className="flex space-x-2">
             {Object.entries(reactionEmoji).map(([name, emoji]) => (
                 <motion.button
                     key={name}
