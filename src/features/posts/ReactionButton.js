@@ -4,9 +4,9 @@ import { reactionAdded } from "./postsSlice";
 
 const reactionEmoji = {
     thumbsUp: '👍',
+    thumbsDown: '👎',
     wow: '🤯',
     heart: '❤️',
-    thumbsDown: '👎',
     coffee: '☕'
 }
 
@@ -18,7 +18,7 @@ const ReactionButtons = ({ post }) => {
     };
 
     return (
-        <div className="space-x-2">
+        <div className="flex overflow-x-auto space-x-2">
             {Object.entries(reactionEmoji).map(([name, emoji]) => (
                 <motion.button
                     key={name}
@@ -27,8 +27,7 @@ const ReactionButtons = ({ post }) => {
                     onClick={() => handleReactionClick(name)}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.1 }}
-                >
+                    transition={{ duration: 0.1 }}>
                     <span className="mr-1">{emoji}</span> 
                     <span>{post.reactions[name]}</span>
                 </motion.button>
@@ -36,4 +35,5 @@ const ReactionButtons = ({ post }) => {
         </div>
     );
 };
+
 export default ReactionButtons;

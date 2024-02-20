@@ -6,38 +6,46 @@ import TimeAgo from "./Time";
 import ReactionButtons from "./ReactionButton";
 
 const PostsList = () => {
-    const posts = useSelector(selectAllPosts)
-
-    const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+    const posts = useSelector(selectAllPosts);
+    const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
 
     return (
-        <motion.section
-            className="max-w-2xl mx-auto bg-white rounded-lg shadow-md overflow-hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-        >
-            <h2 className="text-3xl font-bold mb-4 text-gray-800 px-6 py-4 bg-gray-100">Entries</h2>
-            {orderedPosts.map(post => (
-                <motion.article
-                    key={post.id}
-                    className="border-b border-gray-200 py-4 px-6"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.1 }}
-                >
-                    <h3 className="text-xl font-bold mb-2 text-gray-800">{post.title}</h3>
-                    <p className="text-gray-700 mb-4">{post.content.substring(0, 100)}</p>
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                            <PostAuthor userId={post.userId} />
-                            <TimeAgo timestamp={post.date} />
-                        </div>
-                        <ReactionButtons post={post} />
-                    </div>
-                </motion.article>
-            ))}
-        </motion.section>
+        <div className="font-oswald bg-gray-900">
+            <section className="max-w-screen-xl mx-auto py-16 px-4 lg:px-6">
+                <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+                    <h2 className="font-oswald mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-white">Recent Film Entries:</h2>
+                </div>
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+                    {orderedPosts.map(post => (
+                        <motion.article
+                            key={post.id}
+                            className="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border dark:border-gray-700"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}>
+                            <div className="flex justify-between items-center mb-5 text-gray-500">
+                                <span className="text-sm"><TimeAgo timestamp={post.date} /></span>
+                            </div>
+                            <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{post.title}</h2>
+                            <p className="mb-5 font-light text-gray-700 dark:text-gray-400">{post.content.substring(0, 100)}</p>
+                            <div className="flex justify-between items-center">
+                                <div className="flex items-center space-x-4">
+                                    <PostAuthor userId={post.userId} className="text-sm" />
+                                    <ReactionButtons post={post} size="sm" />
+                                </div>
+                                <motion.a
+                                    href="#"
+                                    className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}>
+                                </motion.a>
+                            </div>
+                        </motion.article>
+                    ))}
+                </div>
+            </section>
+        </div>
     );
-}
+};
 
 export default PostsList;

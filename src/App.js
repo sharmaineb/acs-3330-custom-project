@@ -1,6 +1,6 @@
 import MovieComponent from "./components/Movie";
 import PostsList from "./features/posts/PostsList";
-import AddPostForm from "./features/posts/AddPost";
+import AddEntryForm from "./features/posts/AddEntry";
 import Landing from "./components/Landing";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <main className="App">
       <Landing />
       <MovieComponent />
-      <AddPostForm />
+      <AddEntryForm />
       <PostsList />
     </main>
   );

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Landing = () => {
   return (
-    <div className='w-full h-full relative'>
+    <div className='w-full h-full relative bg-gray-900'>
       <motion.img
         src={`https://static-prod.adweek.com/wp-content/uploads/2022/03/movie-theater-buys-back-2022.jpg`}
         alt='Hero Img'
@@ -19,16 +19,16 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <h1 className="pr-5 text-3xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
+          <h1 className="font-oswald pr-5 text-3xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
             ACS 3330
           </h1>
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-2">
+          <h2 className="font-oswald text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-2">
             Single Page Web Applications
           </h2>
-          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2">
+          <h3 className="font-oswald text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2">
             Custom Project
           </h3>
-          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+          <h3 className="font-oswald text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
             By: Sharmaine L. Borbe
           </h3>
         </motion.div>

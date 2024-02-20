@@ -4,7 +4,7 @@ import { sub } from 'date-fns';
 const initialState = [
     {
         id: '1',
-        title: 'Watched Saltburn',
+        title: 'Saltburn',
         content: "I've heard good things.",
         date: sub(new Date(), { minutes: 10 }).toISOString(),
         userId: '1', 
@@ -142,7 +142,81 @@ const initialState = [
             coffee: 0
         }
     },
-    // add more movies later
+    {
+        id: '11',
+        title: 'How to Lose a Guy in 10 Days',
+        content: "A romantic comedy about a magazine writer who tries to lose a guy in 10 days as an assignment, but ends up falling for him.",
+        date: sub(new Date(), { days: 9 }).toISOString(),
+        userId: '3', 
+        reactions: {
+            thumbsUp: 38,
+            wow: 20,
+            heart: 30,
+            thumbsDown: 1,
+            coffee: 0
+        }
+    },
+    // The Princess Diaries
+    {
+        id: '12',
+        title: 'The Princess Diaries',
+        content: "A charming coming-of-age story about a teenager who discovers she's a princess and must learn to navigate royal life.",
+        date: sub(new Date(), { days: 10 }).toISOString(),
+        userId: '1', 
+        reactions: {
+            thumbsUp: 42,
+            wow: 28,
+            heart: 35,
+            thumbsDown: 2,
+            coffee: 0
+        }
+    },
+    // Get Out
+    {
+        id: '13',
+        title: 'Get Out',
+        content: "A gripping horror thriller that explores race relations in America through a unique and chilling story.",
+        date: sub(new Date(), { days: 11 }).toISOString(),
+        userId: '2', 
+        reactions: {
+            thumbsUp: 45,
+            wow: 30,
+            heart: 40,
+            thumbsDown: 3,
+            coffee: 0
+        }
+    },
+    // Minari
+    {
+        id: '14',
+        title: 'Minari',
+        content: "A touching drama about a Korean immigrant family trying to achieve the American Dream by starting a farm in rural Arkansas.",
+        date: sub(new Date(), { days: 12 }).toISOString(),
+        userId: '0', 
+        reactions: {
+            thumbsUp: 48,
+            wow: 35,
+            heart: 45,
+            thumbsDown: 2,
+            coffee: 0
+        }
+    },
+    // Four Sisters and a Wedding
+    {
+        id: '15',
+        title: 'Four Sisters and a Wedding',
+        content: "A heartwarming Filipino family comedy about four sisters who reunite for their youngest brother's wedding.",
+        date: sub(new Date(), { days: 13 }).toISOString(),
+        userId: '3', 
+        reactions: {
+            thumbsUp: 50,
+            wow: 40,
+            heart: 50,
+            thumbsDown: 2,
+            coffee: 0
+        }
+    },
+    // add more movies here later
 ];
 
 const postsSlice = createSlice({
