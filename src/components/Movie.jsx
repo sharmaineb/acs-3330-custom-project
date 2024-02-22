@@ -59,7 +59,7 @@ const MovieComponent = () => {
   return (
     <div className='font-oswald bg-gray-900'>
       <div className="container mx-auto px-4 py-8" onClick={handleOutsideClick}>
-        <p className="font-light text-gray-300 sm:text-lg text-center mb-4">Explore a collection of films, discover cinematic insights, watch trailers, and engage with fellow movie enthusiasts to stay connected with the latest trends and recommendations.</p>
+        <p className="font-light text-gray-300 sm:text-lg text-center mb-4">Explore a collection of films, discover cinematic insights, watch trailers, and engage with fellow movie enthusiasts to stay connected with the latest trends and recommendations. Click on a movie poster for more info!</p>
         <h1 className="text-3xl font-bold mb-4 text-white text-center">Popular Movies</h1>
         <motion.div 
           className="mb-4"
