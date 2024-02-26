@@ -18,13 +18,6 @@ FilmWave is a dynamic web application designed for avid movie enthusiasts. It pr
 - **Date-fns**: Library for manipulating dates in JavaScript.
 - **Tailwind CSS**: Utility-first CSS framework for styling web applications.
 - **React Redux**: Official React bindings for Redux state management.
-- **React DOM**: Package for working with the DOM in React.
-- **React Scripts**: Configuration and scripts for running React applications.
-- **Web Vitals**: Library for measuring web performance metrics.
-- **Testing Library**: Utilities for testing React components and applications.
-- **eslintConfig**: Configuration for ESLint, a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-- **Browserslist**: Configuration for targeting specific browsers during development and production.
-- **devDependencies**: Tailwind CSS as a development dependency for building and styling the UI.
 
 ## Getting Started
 
@@ -33,7 +26,8 @@ To run the project locally, follow these steps:
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install dependencies using `npm install`.
-4. Start the development server using `npm start`.
+4. Obtain an API Key from [The Movie Database](https://developer.themoviedb.org/reference/intro/getting-started)
+5. Start the development server using `npm start`.
 
 
 ## License
