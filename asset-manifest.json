@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sharmaineb/acs-3330-custom-project/static/css/main.a5671ca5.css",
+    "main.js": "/sharmaineb/acs-3330-custom-project/static/js/main.e03a5509.js",
+    "index.html": "/sharmaineb/acs-3330-custom-project/index.html",
+    "main.a5671ca5.css.map": "/sharmaineb/acs-3330-custom-project/static/css/main.a5671ca5.css.map",
+    "main.e03a5509.js.map": "/sharmaineb/acs-3330-custom-project/static/js/main.e03a5509.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5671ca5.css",
+    "static/js/main.e03a5509.js"
+  ]
+}
