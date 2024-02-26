@@ -1,5 +1,7 @@
 # FilmWave
 
+[Live Link](https://sharmaineb.github.io/acs-3330-custom-project/)
+
 FilmWave is a dynamic web application designed for avid movie enthusiasts. It provides a platform where users can engage with one another by sharing their thoughts and reviews on recently watched movies. With features like browsing popular movies, searching for specific titles, watching trailers, and interacting with other users' posts, FilmWave offers a vibrant community for exploring and discussing cinematic experiences.
 
 ## Features
